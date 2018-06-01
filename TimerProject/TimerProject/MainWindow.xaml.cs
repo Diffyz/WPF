@@ -8,35 +8,73 @@ namespace TimerProject
 
     public partial class MainWindow : Window
     {
-        DateTime date;
-        DispatcherTimer timer = new DispatcherTimer();
-
+        private DateTime date;
+        private DispatcherTimer timer = new DispatcherTimer();
+        private int countBound = 0;
 
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();    
+        }   
+
+        private void TimerStart(object sender, RoutedEventArgs e)
+        {
+            if (contextStart.Text == "Старт   ")
+            {
+                 CreateNewTimer();                
+            }
+            else
+            {
+                ContinueTimer();
+            }
 
         }
-        
-        private void TimerStart(object sender, RoutedEventArgs e)
+
+        private void CreateNewTimer()
         {
             date = DateTime.Now;
             timer.Tick += new EventHandler(TickTimer);
             timer.Interval = TimeSpan.FromMilliseconds(10);
             timer.Start();
-
+        }
+        private void ContinueTimer()
+        {
+            timer.Start();
+            contextStart.Text = "Старт   ";
+            contentStop.Text = "Стоп   ";
         }
         private void TickTimer(object sender, EventArgs e)
         {
-            long tick = DateTime.Now.Ticks - date.Ticks;
             DateTime stopWatch = new DateTime();
-            stopWatch= stopWatch.AddTicks(tick);
+            long tick = DateTime.Now.Ticks - date.Ticks;
+            stopWatch = stopWatch.AddTicks(tick);
             _timer.Content = String.Format("{0:HH:mm:ss:ff}", stopWatch);
-        }
 
+        }
         private void TimerStop(object sender, RoutedEventArgs e)
         {
-            timer.Stop();
+            if (contentStop.Text == "Стоп   ")
+            {
+                timer.Stop();
+                contextStart.Text = "Продолжить   ";
+                contentStop.Text = "Сброс   ";
+            }
+            else
+            {
+                contextStart.Text = "Старт   ";
+                contentStop.Text = "Стоп   ";
+                showResultBound.Text = string.Empty;
+                _timer.Content = "00:00:00.00";
+            }
+
         }
+
+        private void SaveBound(object sender, RoutedEventArgs e)
+        {
+            ++countBound;
+            showResultBound.Text += $"{countBound}-й круг! Время: {_timer.Content}\n";        
+        }
+
+
     }
 }

@@ -1,0 +1,15 @@
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.csprojResolveAssemblyReference.cache
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\MainWindow.g.cs
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\App.g.cs
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject_MarkupCompile.cache
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject_MarkupCompile.lref
+D:\GitRep\WPF\TimerProject\TimerProject\bin\Debug\TimerProject.exe.config
+D:\GitRep\WPF\TimerProject\TimerProject\bin\Debug\TimerProject.exe
+D:\GitRep\WPF\TimerProject\TimerProject\bin\Debug\TimerProject.pdb
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\MainWindow.baml
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.g.resources
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.Properties.Resources.resources
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.csproj.GenerateResource.cache
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.csproj.CoreCompileInputs.cache
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.exe
+D:\GitRep\WPF\TimerProject\TimerProject\obj\Debug\TimerProject.pdb

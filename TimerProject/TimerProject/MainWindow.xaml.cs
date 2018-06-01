@@ -32,7 +32,6 @@ namespace TimerProject
             DateTime stopWatch = new DateTime();
             stopWatch= stopWatch.AddTicks(tick);
             _timer.Content = String.Format("{0:HH:mm:ss:ff}", stopWatch);
-           // _timer.Content = DateTime.Now.ToString("HH:mm:ss:ff");
         }
 
         private void TimerStop(object sender, RoutedEventArgs e)

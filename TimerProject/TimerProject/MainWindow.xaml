@@ -6,14 +6,16 @@
         xmlns:local="clr-namespace:TimerProject"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Window.Resources>
         <Style x:Key="_border">
             <Setter Property="Control.BorderBrush" Value="Red" />
             <Setter Property="Control.BorderThickness" Value="3"/>
             <Setter Property="Control.HorizontalAlignment" Value="Center"/>
             <Setter Property="Control.VerticalAlignment" Value="Center"/>
-
         </Style>
+
+
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -29,17 +31,27 @@
             <RowDefinition Height="30"  />
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Label x:Name="_timer" Style="{StaticResource ResourceKey=_border}" FontStyle="Normal" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="40"  Grid.Row="1" Grid.Column="1" Content="00:00:00. 000" Background="Black" Foreground="Yellow">
+        <Label x:Name="_timer" Style="{StaticResource ResourceKey=_border}" FontStyle="Normal" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="40"  Grid.Row="1" Grid.Column="1" Content="00:00:00.00" Background="Black" Foreground="Yellow">
 
         </Label>
-        <Button Content="Старт" Grid.Column="0" Grid.Row="4" Click="TimerStart">
-
+      
+        <Button Grid.Column="0" Grid.Row="4" Click="TimerStart" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Старт   "/>
+                <Image Source="Resources/img/Start.png" Height="23" Width="23"/>
+            </StackPanel>
         </Button>
-        <Button Content="Стоп" Grid.Column="1" Grid.Row="4" Click="TimerStop" >
-
+        <Button  Grid.Column="1" Grid.Row="4" Click="TimerStop" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Стоп   "/>
+                <Image Source="Resources/img/stop.png" Height="23" Width="23"/>
+            </StackPanel>
         </Button>
-        <Button Content="Круг" Grid.Column="2" Grid.Row="4" >
-
+        <Button  Grid.Column="2" Grid.Row="4" >
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Круг   "/>
+                <Image Source="Resources/img/bound.png" Height="23" Width="23"/>
+            </StackPanel>
         </Button>
 
     </Grid>

@@ -63,12 +63,12 @@ namespace TimerProject
             {
                 contextStart.Text = "Старт   ";
                 contentStop.Text = "Стоп   ";
+                countBound = 0;
                 showResultBound.Text = string.Empty;
                 _timer.Content = "00:00:00.00";
             }
 
         }
-
         private void SaveBound(object sender, RoutedEventArgs e)
         {
             ++countBound;

@@ -15,7 +15,7 @@
             <Setter Property="Control.VerticalAlignment" Value="Center"/>
         </Style>
     </Window.Resources>
-    <Grid >
+    <Grid Background="BlueViolet">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -29,17 +29,17 @@
             <RowDefinition Height="1*"  />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Menu Grid.Column="0" Grid.Row="0" Width="100" HorizontalAlignment="Left">
-            <MenuItem Header="Выбор режима">
-                <MenuItem Header="Секундомер"/>
-                <MenuItem Header="Таймер"/>
-            </MenuItem>
-        </Menu>
-        <TextBox x:Name="_timer" Style="{StaticResource ResourceKey=_border}" FontStyle="Normal" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="40"  Grid.Row="1" Grid.Column="1" Content="00:00:00.00" Background="Black" Foreground="Yellow">
+       
+        <Label x:Name="_timer" Style="{StaticResource ResourceKey=_border}" FontStyle="Normal" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center" FontSize="40"  Grid.Row="1" Grid.Column="1" Content="00:00:00.00" Background="Black" Foreground="Yellow">
 
-        </TextBox>
-        <TextBox x:Name="showResultBound" Background="AntiqueWhite" Style="{StaticResource ResourceKey=_border}" Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" IsEnabled="False" >
-        </TextBox>
+        </Label>
+        <TextBox x:Name="showResultBound" Background="AntiqueWhite" Style="{StaticResource ResourceKey=_border}" Grid.Column="0"  Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" 
+                 VerticalAlignment="Stretch"
+                 Margin="10" 
+                 IsReadOnly = "true"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+
         <Button x:Name="start" Grid.Column="0" Grid.Row="4" Click="TimerStart" >
             <StackPanel Orientation="Horizontal">
                 <TextBlock x:Name="contextStart" Text="Старт   "/>
